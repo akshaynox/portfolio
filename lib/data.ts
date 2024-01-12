@@ -87,6 +87,20 @@ export const projectsData = [
     tags: ["React", "Express", "Styled Components", "Spotify API"],
     imageUrl: spotifyVisImg,
   },
+  {
+    title: "NoxDocs2",
+    description:
+      "Workspace App with Realtime cursors, Nextjs 13, Stripe, Drizzle ORM, Tailwind, Supabase, Sockets",
+    tags: [
+      "React",
+      "Next.js 13",
+      "Typescript",
+      "Tailwind",
+      "Sockets",
+      "Drizzle ORM",
+    ],
+    imageUrl: noxdocsImg,
+  },
   // {
   //   title: "Tweedle",
   //   description: "",
@@ -105,14 +119,11 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
   "MongoDB",
   "Redux",
-  "GraphQL",
-  "Apollo",
   "Express",
+  "Electron.js",
   "PostgreSQL",
   "Python",
-  "Django",
   "Framer Motion",
 ] as const;
