@@ -27,10 +27,8 @@ const About = () => {
         </span>
         . I am also familiar with MongoDB, Postgres, Redis & Tailwind. I am
         always looking to learn new technologies.
-        <p>
-          <span className="italic">When I'm not coding</span>, I enjoy playing
-          video games, watching movies, and reading sci-fi/fantasy books.
-        </p>
+        <span className="italic">When I'm not coding</span>, I enjoy playing
+        video games, watching movies, and reading sci-fi/fantasy books.
       </p>
     </motion.section>
   );
