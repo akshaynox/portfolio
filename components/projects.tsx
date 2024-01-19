@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -13,8 +14,24 @@ const Project: React.FC<ProjectProps> = ({
   tags,
   imageUrl,
 }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
-    <div className="group mb-3 sm:mb-8 last:mb-0">
+    <motion.div
+      ref={ref}
+      className="group mb-3 sm:mb-8 last:mb-0"
+      style={{
+        scale: scaleProgess,
+        opacity: opacityProgess,
+      }}
+    >
       <section
         className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden
       sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white
@@ -57,13 +74,13 @@ const Project: React.FC<ProjectProps> = ({
           group-even:right-[initial] group-even:-left-40"
         />
       </section>
-    </div>
+    </motion.div>
   );
 };
 
 const Projects = () => {
   return (
-    <section>
+    <section id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>My Projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
