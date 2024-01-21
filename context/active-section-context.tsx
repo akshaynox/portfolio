@@ -21,8 +21,7 @@ export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
   const [activeSection, setActiveSection] = useState<SectionName>("Home");
-  const timeOfLastClick = 0,
-    setTimeOfLastClick = () => {};
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0); //to disable intersection observer temporarily
 
   return (
     <ActiveSectionContext.Provider
