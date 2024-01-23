@@ -40,6 +40,12 @@ const Contact = () => {
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
+          if (error) {
+            console.log(error);
+            return;
+          }
+
+          console.log("Email sent successfully!");
         }}
       >
         <input
