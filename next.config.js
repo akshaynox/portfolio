@@ -7,7 +7,10 @@ const nextConfig = {
         hostname: 'i.ibb.co'
       }
     ]
-  }
+  },
+  experimental: {
+    serverActions: true,
+  },
 }
 
 module.exports = nextConfig
