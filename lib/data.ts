@@ -1,7 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+// import { LuGraduationCap } from "react-icons/lu";
 import spotifyVisImg from "@/public/spotifyVisImg.jpg";
 import noxdocsImg from "@/public/noxdocsImg.jpg";
 
@@ -87,20 +87,20 @@ export const projectsData = [
     tags: ["React", "Express", "Styled Components", "Spotify API"],
     imageUrl: spotifyVisImg,
   },
-  {
-    title: "NoxDocs2",
-    description:
-      "Workspace App with Realtime cursors, Nextjs 13, Stripe, Drizzle ORM, Tailwind, Supabase, Sockets",
-    tags: [
-      "React",
-      "Next.js 13",
-      "Typescript",
-      "Tailwind",
-      "Sockets",
-      "Drizzle ORM",
-    ],
-    imageUrl: noxdocsImg,
-  },
+  // {
+  //   title: "NoxDocs2",
+  //   description:
+  //     "Workspace App with Realtime cursors, Nextjs 13, Stripe, Drizzle ORM, Tailwind, Supabase, Sockets",
+  //   tags: [
+  //     "React",
+  //     "Next.js 13",
+  //     "Typescript",
+  //     "Tailwind",
+  //     "Sockets",
+  //     "Drizzle ORM",
+  //   ],
+  //   imageUrl: noxdocsImg,
+  // },
   // {
   //   title: "Tweedle",
   //   description: "",
